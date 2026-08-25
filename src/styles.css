@@ -196,3 +196,19 @@
     animation: none;
   }
 }
+
+.rail-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) transparent;
+}
+.rail-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.rail-scroll::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 9999px;
+}
+.rail-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
