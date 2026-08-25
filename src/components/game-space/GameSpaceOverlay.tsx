@@ -7,16 +7,18 @@ import { navItems, type NavId } from "./data";
 
 function LiveTelemetry() {
   const items = [
-    { label: "PING", value: "20ms", ok: true },
-    { label: "FPS", value: "90", ok: true },
-    { label: "TEMP", value: "38°C" },
+    { label: "PING", value: "20ms" },
+    { label: "FPS", value: "90" },
   ];
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex items-center gap-2">
       {items.map((i) => (
-        <div key={i.label} className="flex flex-col items-center leading-tight">
-          <span className="text-[10px] font-medium tracking-[0.16em] text-muted-foreground">{i.label}</span>
-          <span className={`text-sm font-bold ${i.ok ? "text-status-ok" : "text-foreground"}`}>{i.value}</span>
+        <div
+          key={i.label}
+          className="flex flex-col items-center border border-border bg-surface-2 px-2.5 py-1 leading-tight card-chamfer"
+        >
+          <span className="text-[9px] font-medium tracking-[0.16em] text-muted-foreground">{i.label}</span>
+          <span className="text-sm font-bold text-status-ok">{i.value}</span>
         </div>
       ))}
     </div>
