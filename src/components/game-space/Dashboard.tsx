@@ -102,7 +102,7 @@ export function Dashboard() {
 
       <section className="border border-border bg-surface-1 p-3 card-chamfer">
         <SectionTitle>Quick Tools</SectionTitle>
-        <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">
+        <div className="mt-2 grid grid-cols-2 gap-2">
           {quickTools.map((t) => {
             const isOn = active.includes(t.id);
             return (
@@ -111,14 +111,14 @@ export function Dashboard() {
                 type="button"
                 onClick={() => t.toggle && toggle(t.id)}
                 aria-pressed={t.toggle ? isOn : undefined}
-                className={`flex items-center gap-2 border px-3 py-2.5 text-left transition-colors duration-150 card-chamfer ${
+                className={`flex w-full min-w-0 items-center gap-2 border px-3 py-2.5 text-left transition-colors duration-150 card-chamfer ${
                   isOn
                     ? "border-red bg-red/12"
                     : "border-border bg-surface-2 hover:border-red/40"
                 }`}
               >
                 <t.icon className={`size-4 shrink-0 ${isOn ? "text-red" : "text-red/80"}`} />
-                <span className="truncate text-[13px] font-medium text-foreground">{t.label}</span>
+                <MarqueeText text={t.label} className="text-[13px] font-medium text-foreground" />
               </button>
             );
           })}
