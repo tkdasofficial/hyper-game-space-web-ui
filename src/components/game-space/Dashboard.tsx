@@ -94,7 +94,7 @@ export function Dashboard() {
 
       <section className="border border-border bg-surface-1 p-3 card-chamfer">
         <SectionTitle>Quick Tools</SectionTitle>
-        <div className="mt-2 grid grid-cols-2 gap-2">
+        <div className="mt-2 flex gap-2 overflow-x-auto pb-1 rail-scroll">
           {quickTools.map((t) => {
             const isOn = active.includes(t.id);
             return (
@@ -103,7 +103,7 @@ export function Dashboard() {
                 type="button"
                 onClick={() => t.toggle && toggle(t.id)}
                 aria-pressed={t.toggle ? isOn : undefined}
-                className={`flex w-full min-w-0 items-center gap-2 border px-3 py-2.5 text-left transition-colors duration-150 card-chamfer ${
+                className={`flex w-[calc(50%-0.25rem)] shrink-0 min-w-0 items-center gap-2 border px-3 py-2.5 text-left transition-colors duration-150 card-chamfer ${
                   isOn
                     ? "border-red bg-red/12"
                     : "border-border bg-surface-2 hover:border-red/40"
