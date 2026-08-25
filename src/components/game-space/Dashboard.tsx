@@ -63,7 +63,7 @@ export function Dashboard() {
     <div className="space-y-3">
       <section className="border border-border bg-surface-1 p-3 card-chamfer">
         <SectionTitle>Performance Status</SectionTitle>
-        <div className="mt-2 grid grid-cols-4 gap-2">
+        <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">
           {metrics.map((m) => (
             <MetricRing key={m.label} {...m} />
           ))}
