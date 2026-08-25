@@ -43,9 +43,10 @@ export function GameSpaceOverlay() {
         aria-hidden="true"
         width={1920}
         height={1088}
-        className="absolute inset-0 size-full scale-105 object-cover blur-[6px] brightness-[0.35] saturate-[0.7]"
+        className="absolute inset-0 size-full scale-105 object-cover blur-[5px] brightness-[0.55] saturate-[0.75]"
       />
-      <div className="absolute inset-0 bg-surface-0/55" aria-hidden="true" />
+      <div className="absolute inset-0 bg-surface-0/45" aria-hidden="true" />
+
 
       <div className="relative flex min-h-screen items-center justify-center p-3 sm:p-6">
         <div
