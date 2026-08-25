@@ -18,7 +18,7 @@ function LiveTelemetry() {
           className="flex flex-col items-center border border-border bg-surface-2 px-2.5 py-1 leading-tight card-chamfer"
         >
           <span className="text-[9px] font-medium tracking-[0.16em] text-muted-foreground">{i.label}</span>
-          <span className="text-sm font-bold text-status-ok">{i.value}</span>
+          <span className="text-sm font-bold text-red">{i.value}</span>
         </div>
       ))}
     </div>
