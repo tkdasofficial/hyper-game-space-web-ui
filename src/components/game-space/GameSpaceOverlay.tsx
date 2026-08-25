@@ -2,7 +2,10 @@ import { useState } from "react";
 import gameBg from "@/assets/game-bg.jpg";
 import { AppLogo } from "./AppLogo";
 import { Dashboard } from "./Dashboard";
-import { SectionTitle } from "./SectionTitle";
+import { ToolsPage } from "./ToolsPage";
+import { NetworkPage } from "./NetworkPage";
+import { RecordPage } from "./RecordPage";
+import { SettingsPage } from "./SettingsPage";
 import { navItems, type NavId } from "./data";
 
 function LiveTelemetry() {
@@ -22,15 +25,6 @@ function LiveTelemetry() {
         </div>
       ))}
     </div>
-  );
-}
-
-function PlaceholderPage({ title, note }: { title: string; note: string }) {
-  return (
-    <section className="border border-border bg-surface-1 p-4 card-chamfer">
-      <SectionTitle>{title}</SectionTitle>
-      <p className="mt-3 text-sm text-muted-foreground">{note}</p>
-    </section>
   );
 }
 
@@ -93,18 +87,10 @@ export function GameSpaceOverlay() {
 
             <main className="min-w-0 flex-1 p-3 sm:p-4">
               {nav === "dashboard" && <Dashboard />}
-              {nav === "tools" && (
-                <PlaceholderPage title="Gaming Tools" note="Extended in-game tools will appear here." />
-              )}
-              {nav === "network" && (
-                <PlaceholderPage title="Network" note="Network optimization and monitoring controls." />
-              )}
-              {nav === "record" && (
-                <PlaceholderPage title="Record" note="Screen recording and capture controls." />
-              )}
-              {nav === "settings" && (
-                <PlaceholderPage title="Settings" note="Toolbox preferences and overlay behaviour." />
-              )}
+              {nav === "tools" && <ToolsPage />}
+              {nav === "network" && <NetworkPage />}
+              {nav === "record" && <RecordPage />}
+              {nav === "settings" && <SettingsPage />}
             </main>
           </div>
         </div>
