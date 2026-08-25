@@ -28,15 +28,6 @@ function LiveTelemetry() {
   );
 }
 
-function PlaceholderPage({ title, note }: { title: string; note: string }) {
-  return (
-    <section className="border border-border bg-surface-1 p-4 card-chamfer">
-      <SectionTitle>{title}</SectionTitle>
-      <p className="mt-3 text-sm text-muted-foreground">{note}</p>
-    </section>
-  );
-}
-
 export function GameSpaceOverlay() {
   const [nav, setNav] = useState<NavId>("dashboard");
 
