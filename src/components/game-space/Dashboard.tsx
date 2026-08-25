@@ -38,10 +38,10 @@ function MetricRing({
           />
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[14px] font-bold tracking-widest text-foreground">{label}</span>
+          <span className="text-[14px] font-bold tracking-widest text-foreground">{percent}%</span>
         </div>
       </div>
-      <span className="text-[12px] font-semibold text-red">{percent}%</span>
+      <span className="text-[12px] font-semibold text-red">{label}</span>
     </div>
   );
 }
