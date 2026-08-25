@@ -50,7 +50,7 @@ export function GameSpaceOverlay() {
 
       <div className="relative flex min-h-screen items-center justify-center p-3 sm:p-6">
         <div
-          className="w-full max-w-xl border border-border bg-surface-0/95 panel-chamfer"
+          className="w-full max-w-lg border border-border bg-surface-0/95 panel-chamfer"
           style={{ boxShadow: "var(--shadow-panel)" }}
         >
           <header className="flex items-center justify-between gap-4 border-b border-border bg-surface-1/80 px-4 py-3">
