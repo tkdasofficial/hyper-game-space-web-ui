@@ -94,7 +94,7 @@ export function Dashboard() {
 
       <section className="border border-border bg-surface-1 p-3 card-chamfer">
         <SectionTitle>Quick Tools</SectionTitle>
-        <div className="mt-2 flex gap-2 overflow-x-auto pb-1 rail-scroll">
+        <div className="mt-2 grid grid-rows-2 grid-flow-col auto-cols-[calc(50%-0.25rem)] gap-2 overflow-x-auto pb-1 rail-scroll">
           {quickTools.map((t) => {
             const isOn = active.includes(t.id);
             return (
