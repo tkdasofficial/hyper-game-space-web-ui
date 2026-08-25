@@ -103,7 +103,7 @@ export function Dashboard() {
                 type="button"
                 onClick={() => t.toggle && toggle(t.id)}
                 aria-pressed={t.toggle ? isOn : undefined}
-                className={`flex w-[calc(50%-0.25rem)] shrink-0 min-w-0 items-center gap-2 border px-3 py-2.5 text-left transition-colors duration-150 card-chamfer ${
+                className={`flex w-full min-w-0 items-center gap-2 border px-3 py-2.5 text-left transition-colors duration-150 card-chamfer ${
                   isOn
                     ? "border-red bg-red/12"
                     : "border-border bg-surface-2 hover:border-red/40"
