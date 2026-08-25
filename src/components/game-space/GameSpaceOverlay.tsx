@@ -85,7 +85,7 @@ export function GameSpaceOverlay() {
               })}
             </nav>
 
-            <main className="min-w-0 flex-1 h-[min(560px,72vh)] overflow-y-auto rail-scroll p-3 sm:p-4">
+            <main className="min-w-0 flex-1 max-h-[min(560px,72vh)] overflow-y-auto rail-scroll p-3 sm:p-4">
               {nav === "dashboard" && <Dashboard />}
               {nav === "tools" && <ToolsPage />}
               {nav === "network" && <NetworkPage />}
