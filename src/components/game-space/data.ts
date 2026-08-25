@@ -30,10 +30,10 @@ export const navItems: { id: NavId; label: string; icon: LucideIcon }[] = [
 ];
 
 export const metrics = [
-  { label: "CPU", value: "45%", percent: 45, secondary: "2.3 GHz" },
-  { label: "GPU", value: "60%", percent: 60, secondary: "587 MHz" },
-  { label: "RAM", value: "70%", percent: 70, secondary: "5.6 / 8 GB" },
-  { label: "TEMP", value: "38°C", percent: 38, secondary: "Good", ok: true },
+  { label: "CPU", value: "45%", percent: 45, secondary: "2.3 GHz", display: "45%" },
+  { label: "GPU", value: "60%", percent: 60, secondary: "587 MHz", display: "60%" },
+  { label: "RAM", value: "5.6 / 8 GB", percent: 70, secondary: "5.6 / 8 GB", display: "5.6/8GB" },
+  { label: "TEMP", value: "38°C", percent: 38, secondary: "Good", ok: true, display: "38°C" },
 ];
 
 export const modes: { id: string; name: string; desc: string; icon: LucideIcon }[] = [
