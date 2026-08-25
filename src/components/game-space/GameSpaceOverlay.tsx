@@ -2,7 +2,10 @@ import { useState } from "react";
 import gameBg from "@/assets/game-bg.jpg";
 import { AppLogo } from "./AppLogo";
 import { Dashboard } from "./Dashboard";
-import { SectionTitle } from "./SectionTitle";
+import { ToolsPage } from "./ToolsPage";
+import { NetworkPage } from "./NetworkPage";
+import { RecordPage } from "./RecordPage";
+import { SettingsPage } from "./SettingsPage";
 import { navItems, type NavId } from "./data";
 
 function LiveTelemetry() {
