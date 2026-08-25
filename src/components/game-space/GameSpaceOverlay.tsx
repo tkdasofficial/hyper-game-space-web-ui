@@ -50,13 +50,8 @@ export function GameSpaceOverlay() {
 
       <div className="relative flex min-h-screen items-center justify-center p-3 sm:p-6">
         <div
-          className="border border-border bg-surface-0/95 panel-chamfer flex flex-col overflow-hidden"
-          style={{
-            boxShadow: "var(--shadow-panel)",
-            width: "min(68vw, 1200px)",
-            aspectRatio: "3 / 2",
-            maxHeight: "72vh",
-          }}
+          className="border border-border bg-surface-0/95 panel-chamfer flex flex-col overflow-hidden w-[92vw] max-w-[1200px] sm:w-[68vw] aspect-[3/2] max-h-[80vh] sm:max-h-[72vh]"
+          style={{ boxShadow: "var(--shadow-panel)" }}
         >
           <header className="flex shrink-0 items-center justify-between gap-4 border-b border-border bg-surface-1/80 px-4 py-3">
             <div className="flex items-center gap-3">
