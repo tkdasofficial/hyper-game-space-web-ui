@@ -5,16 +5,10 @@ import { SectionTitle } from "./SectionTitle";
 
 function MetricRing({
   label,
-  value,
   percent,
-  secondary,
-  ok,
 }: {
   label: string;
-  value: string;
   percent: number;
-  secondary: string;
-  ok?: boolean;
 }) {
   const r = 30;
   const c = 2 * Math.PI * r;
@@ -43,16 +37,11 @@ function MetricRing({
             strokeLinecap="round"
           />
         </svg>
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-2">
-          <span className="text-[10px] font-medium tracking-widest text-muted-foreground">{label}</span>
-          <span
-            className={`text-center text-[13px] font-bold leading-tight ${ok ? "text-status-ok" : "text-foreground"}`}
-          >
-            {secondary}
-          </span>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-[14px] font-bold tracking-widest text-foreground">{label}</span>
         </div>
       </div>
-      <span className="text-[12px] font-semibold text-red">{value}</span>
+      <span className="text-[12px] font-semibold text-red">{percent}%</span>
     </div>
   );
 }
