@@ -156,3 +156,22 @@
     color: var(--color-foreground);
   }
 }
+
+@theme inline {
+  --color-surface-0: var(--surface-0);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-rail: var(--rail);
+  --color-red: var(--red);
+  --color-status-ok: var(--status-ok);
+  --font-sans: var(--font-ui);
+}
+
+/* Asymmetric panel geometry: sharp top-left / bottom-right, chamfered top-right / bottom-left */
+@utility panel-chamfer {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+@utility card-chamfer {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
