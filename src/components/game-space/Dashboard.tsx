@@ -42,12 +42,16 @@ function MetricRing({
             strokeLinecap="round"
           />
         </svg>
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-2">
           <span className="text-[10px] font-medium tracking-widest text-muted-foreground">{label}</span>
-          <span className="text-base font-bold leading-none text-foreground">{value}</span>
+          <span
+            className={`text-center text-[13px] font-bold leading-tight ${ok ? "text-status-ok" : "text-foreground"}`}
+          >
+            {secondary}
+          </span>
         </div>
       </div>
-      <span className={`text-[11px] ${ok ? "text-status-ok" : "text-muted-foreground"}`}>{secondary}</span>
+      <span className="text-[12px] font-semibold text-red">{value}</span>
     </div>
   );
 }
