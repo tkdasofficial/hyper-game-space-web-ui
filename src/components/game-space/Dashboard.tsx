@@ -6,9 +6,11 @@ import { SectionTitle } from "./SectionTitle";
 function MetricRing({
   label,
   percent,
+  display,
 }: {
   label: string;
   percent: number;
+  display: string;
 }) {
   const r = 30;
   const c = 2 * Math.PI * r;
@@ -38,7 +40,7 @@ function MetricRing({
           />
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[14px] font-bold tracking-widest text-foreground">{percent}%</span>
+          <span className="text-[13px] font-bold tracking-widest text-foreground">{display}</span>
         </div>
       </div>
       <span className="text-[12px] font-semibold text-red">{label}</span>
