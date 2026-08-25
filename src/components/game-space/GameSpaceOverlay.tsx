@@ -87,18 +87,10 @@ export function GameSpaceOverlay() {
 
             <main className="min-w-0 flex-1 p-3 sm:p-4">
               {nav === "dashboard" && <Dashboard />}
-              {nav === "tools" && (
-                <PlaceholderPage title="Gaming Tools" note="Extended in-game tools will appear here." />
-              )}
-              {nav === "network" && (
-                <PlaceholderPage title="Network" note="Network optimization and monitoring controls." />
-              )}
-              {nav === "record" && (
-                <PlaceholderPage title="Record" note="Screen recording and capture controls." />
-              )}
-              {nav === "settings" && (
-                <PlaceholderPage title="Settings" note="Toolbox preferences and overlay behaviour." />
-              )}
+              {nav === "tools" && <ToolsPage />}
+              {nav === "network" && <NetworkPage />}
+              {nav === "record" && <RecordPage />}
+              {nav === "settings" && <SettingsPage />}
             </main>
           </div>
         </div>
