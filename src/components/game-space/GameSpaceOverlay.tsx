@@ -50,10 +50,10 @@ export function GameSpaceOverlay() {
 
       <div className="relative flex min-h-screen items-center justify-center p-3 sm:p-6">
         <div
-          className="border border-border bg-surface-0/95 panel-chamfer flex flex-col overflow-hidden w-[92vw] max-w-[1200px] sm:w-[68vw] aspect-[3/2] max-h-[80vh] sm:max-h-[72vh]"
+          className="w-full max-w-5xl border border-border bg-surface-0/95 panel-chamfer"
           style={{ boxShadow: "var(--shadow-panel)" }}
         >
-          <header className="flex shrink-0 items-center justify-between gap-4 border-b border-border bg-surface-1/80 px-4 py-3">
+          <header className="flex items-center justify-between gap-4 border-b border-border bg-surface-1/80 px-4 py-3">
             <div className="flex items-center gap-3">
               <AppLogo />
               <h1 className="text-lg font-bold uppercase tracking-[0.12em] text-foreground">
@@ -63,7 +63,7 @@ export function GameSpaceOverlay() {
             <LiveTelemetry />
           </header>
 
-          <div className="flex min-h-0 flex-1">
+          <div className="flex">
             <nav aria-label="Toolbox sections" className="w-[86px] shrink-0 border-r border-border bg-rail py-2">
               {navItems.map((item) => {
                 const isActive = nav === item.id;
@@ -89,7 +89,7 @@ export function GameSpaceOverlay() {
               })}
             </nav>
 
-            <main className="min-w-0 flex-1 overflow-auto p-3 sm:p-4">
+            <main className="min-w-0 flex-1 p-3 sm:p-4">
               {nav === "dashboard" && <Dashboard />}
               {nav === "tools" && (
                 <PlaceholderPage title="Gaming Tools" note="Extended in-game tools will appear here." />
