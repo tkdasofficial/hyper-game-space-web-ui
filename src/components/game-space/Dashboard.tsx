@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { metrics, modes, quickTools } from "./data";
+import { MarqueeText } from "./MarqueeText";
 import { SectionTitle } from "./SectionTitle";
 
 function MetricRing({
@@ -42,12 +43,16 @@ function MetricRing({
             strokeLinecap="round"
           />
         </svg>
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-2">
           <span className="text-[10px] font-medium tracking-widest text-muted-foreground">{label}</span>
-          <span className="text-base font-bold leading-none text-foreground">{value}</span>
+          <span
+            className={`text-center text-[13px] font-bold leading-tight ${ok ? "text-status-ok" : "text-foreground"}`}
+          >
+            {secondary}
+          </span>
         </div>
       </div>
-      <span className={`text-[11px] ${ok ? "text-status-ok" : "text-muted-foreground"}`}>{secondary}</span>
+      <span className="text-[12px] font-semibold text-red">{value}</span>
     </div>
   );
 }
@@ -98,7 +103,7 @@ export function Dashboard() {
 
       <section className="border border-border bg-surface-1 p-3 card-chamfer">
         <SectionTitle>Quick Tools</SectionTitle>
-        <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">
+        <div className="mt-2 grid grid-cols-2 gap-2">
           {quickTools.map((t) => {
             const isOn = active.includes(t.id);
             return (
@@ -107,14 +112,14 @@ export function Dashboard() {
                 type="button"
                 onClick={() => t.toggle && toggle(t.id)}
                 aria-pressed={t.toggle ? isOn : undefined}
-                className={`flex items-center gap-2 border px-3 py-2.5 text-left transition-colors duration-150 card-chamfer ${
+                className={`flex w-full min-w-0 items-center gap-2 border px-3 py-2.5 text-left transition-colors duration-150 card-chamfer ${
                   isOn
                     ? "border-red bg-red/12"
                     : "border-border bg-surface-2 hover:border-red/40"
                 }`}
               >
                 <t.icon className={`size-4 shrink-0 ${isOn ? "text-red" : "text-red/80"}`} />
-                <span className="truncate text-[13px] font-medium text-foreground">{t.label}</span>
+                <MarqueeText text={t.label} className="text-[13px] font-medium text-foreground" />
               </button>
             );
           })}
