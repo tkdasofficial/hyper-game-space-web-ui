@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { metrics, modes, quickTools } from "./data";
+import { MarqueeText } from "./MarqueeText";
 import { SectionTitle } from "./SectionTitle";
 
 function MetricRing({
